@@ -112,7 +112,7 @@ config:
       description: "Airship Cluster Kubernetes OpenIDC for {{ .Values.params.site.name }}"
       issuer: "https://{{ .Values.params.endpoints.hostname }}:{{.Values.params.endpoints.nodePort.https }}/dex"
       k8s_ca_uri: "http://{{ .Values.params.endpoints.hostname }}:{{ .Values.params.endpoints.nodePort.http }}/ca.crt"
-      k8s_master_uri: "https://{{ .Values.params.endpoints.hostname }}:{{.Values.params.endpoints.nodePort.k8s}}/"
+      k8s_master_uri: "https://{{ .Values.params.endpoints.hostname }}:{{.Values.params.endpoints.port.k8s}}/"
       name: "{{ .Values.params.site.name }}"
       redirect_uri: "https://{{ .Values.params.endpoints.hostname }}:{{ .Values.params.endpoints.nodePort.https }}/ui/callback/{{ .Values.params.oidc.client_id }}"
       short_description: "{{ .Values.params.site.name }} OpenIDC"
